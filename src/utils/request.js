@@ -35,7 +35,6 @@ service.interceptors.response.use(
         if (code === 3001) {
             ElMessage.error(msg);
             removeToken()
-            router.push('/oj/login')
             return Promise.reject(new Error(msg));
         } else if (code !== 1000) {
             ElMessage.error(msg);
@@ -57,3 +56,4 @@ export default service
 
 // 从前端页面直接发起请求会有同源问题
 // 要使用代理服务器 前端请求-->代理服务器-->后端接收请求
+
