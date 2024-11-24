@@ -4,7 +4,7 @@ const router = createRouter({
     routes: [
         {
             path: "/",
-            redirect: "/c-oj/home"
+            redirect: "/c-oj/home/question"
         },
         {
             path: "/c-oj/home",
@@ -14,12 +14,32 @@ const router = createRouter({
                 {
                     path: 'question',
                     name: 'question',
-                    component: () => import('@/views/Question.vue')
+                    component: () => import('@/views/Question.vue'),
+                    meta: { showBanner: true }
                 },
                 {
                     path: 'exam',
                     name: 'exam',
-                    component: () => import('@/views/Exam.vue')
+                    component: () => import('@/views/Exam.vue'),
+                    meta: { showBanner: true }
+                },
+                {
+                    path: 'user/exam',
+                    name: 'userExam',
+                    component: () => import('@/views/UserExam.vue'),
+                    meta: { showBanner: false }
+                }
+                , {
+                    path: 'user/message',
+                    name: 'userMessage',
+                    component: () => import('@/views/UserMessage.vue'),
+                    meta: { showBanner: false }
+                }
+                , {
+                    path: 'user/detail',
+                    name: 'userDetail',
+                    component: () => import('@/views/UserDetail.vue'),
+                    meta: { showBanner: false }
                 },
             ]
         },
@@ -27,6 +47,11 @@ const router = createRouter({
             path: "/c-oj/login",
             name: "login",
             component: () => import("@/views/Login.vue")
+        }, 
+        {
+            path: "/c-oj/answer",
+            name: "answer",
+            component: () => import("@/views/Answer.vue")
         },
     ]
 })

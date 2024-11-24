@@ -179,7 +179,7 @@
   
   function goExam(exam) {
     //需要后端提供一个获取竞赛中第一道题目的id接口
-    router.push(`/c-oj/anwser?examId=${exam.examId}&examTitle=${exam.title}&examEndTime=${exam.endTime}`)
+    router.push(`/c-oj/answer?examId=${exam.examId}&examTitle=${exam.title}&examEndTime=${exam.endTime}`)
   }
   
   const rankParams = reactive({

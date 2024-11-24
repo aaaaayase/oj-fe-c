@@ -9,8 +9,8 @@ const app = createApp(App)
 
 app.use(router)
 
-app.use(ElementPlus,{
-    local: zhCn, 
+app.use(ElementPlus, {
+  locale: zhCn,
 })
 
 app.mount('#app')
